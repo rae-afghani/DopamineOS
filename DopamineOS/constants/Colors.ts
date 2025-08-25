@@ -18,15 +18,29 @@ export const Colors = {
   light: {
     text: darkAzure,
     background: paleTurqoise,
+
+    primaryButtonBG: mediumAzure,
+    primaryButtonText: paleTurqoise,
+    secondaryButtonBG: paleTurqoise,
+    secondaryButtonText: mediumAzure,
+
     tint: tintColorLight,
+
     icon: darkAzure,
     tabIconDefault: darkAzure,
     tabIconSelected: mediumAzure,
   },
   dark: {
-    text: white,
+    text: paleTurqoise,
     background: darkAzure,
+
+    primaryButtonBG: paleTurqoise,
+    primaryButtonText: darkAzure,
+    secondaryButtonBG: darkAzure,
+    secondaryButtonText: paleTurqoise,
+
     tint: tintColorDark,
+
     icon: mediumAzure,
     tabIconDefault: mediumAzure,
     tabIconSelected: azure,

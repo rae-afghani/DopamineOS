@@ -6,20 +6,22 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Colors } from '@/constants/Colors';
-import Button from '@/components/buttons/primary';
+import PrimaryButton from '@/components/buttons/primary';
+import SecondaryButton from '@/components/buttons/secondary';
+import ButtonRow from '@/components/buttons/ButtonRow';
 
 
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: Colors.light.background, dark: Colors.dark.background }}
-        headerImage={
+      headerImage={
         <Image
           source={require('@/assets/images/partial-react-logo.png')}
           style={styles.reactLogo}
         />
-      }> 
-      
+      }>
+
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">DopamineOS</ThemedText>
         <HelloWave />
@@ -28,7 +30,15 @@ export default function HomeScreen() {
         <ThemedText type="subtitle">Your life, rewired.</ThemedText>
       </ThemedView>
 
-      <Button label="Choose a photo" />
+      <PrimaryButton label="Click"/>
+      <SecondaryButton label="Click"/>
+
+      <ButtonRow>
+        <PrimaryButton label="Click"/>
+      <SecondaryButton label="Click"/>
+      </ButtonRow>
+
+
     </ParallaxScrollView>
   );
 }

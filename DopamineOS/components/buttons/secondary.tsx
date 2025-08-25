@@ -31,7 +31,7 @@ type Props = {
 };
 
 
-export default function PrimaryButton({
+export default function SecondaryButton({
     label,
     onPress,
     disabled = false,
@@ -53,8 +53,8 @@ export default function PrimaryButton({
 
     const dim = sizeDims[size];
 
-    const textColor = theme.primaryButtonText;
-    const backgroundColor = theme.primaryButtonBG;
+    const textColor = theme.secondaryButtonText;
+    const backgroundColor = theme.secondaryButtonBG;
 
     const caret = dropdown && !iconRight ? <Text style={[ styles.iconText, { color: textColor }]}>▼</Text> : null;
 
@@ -110,6 +110,7 @@ const styles = StyleSheet.create({
     base: {
         alignItems: 'center',
         justifyContent: 'center',
+        borderWidth: 1.6,
     },
     fullWidth: {
         alignSelf: 'stretch',
