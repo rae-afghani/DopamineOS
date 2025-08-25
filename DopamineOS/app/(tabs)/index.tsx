@@ -38,6 +38,8 @@ export default function HomeScreen() {
       <SecondaryButton label="Click"/>
       </ButtonRow>
 
+      <PrimaryButton label='Dropdown' dropdown/>
+
 
     </ParallaxScrollView>
   );
