@@ -6,6 +6,8 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Colors } from '@/constants/Colors';
+import Button from '@/components/buttons/primary';
+
 
 export default function HomeScreen() {
   return (
@@ -25,6 +27,8 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Your life, rewired.</ThemedText>
       </ThemedView>
+
+      <Button label="Choose a photo" />
     </ParallaxScrollView>
   );
 }
