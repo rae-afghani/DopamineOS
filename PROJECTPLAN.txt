@@ -1,0 +1,56 @@
+Howdy!
+
+I wanted to take the time to outline my plan for this app. I broke it down into 3 phases, each of which builds upon the last.
+
+PHASE ONE: CORE PRODUCT (MVP)
+Goal: A fully-functional daily hub. Works entirely offline.
+
+*IA & Navigation 
+-Today (home)
+-Plan (tasks)
+-Track (health, wealth, self)
+-Journal
+-Me (profile/settings)
+
+Key Screens & Flows
+
+-Today (Home)
+>Header: greeting, date, tiny 'streak counter'
+>Daily Boot Up: short checklist (generated actions vary on time of day), mark all action
+>Focus 3: show only top 3 tasks for today (add/reorder/complete)
+>Quick Add: input to add a task, journal line, spend, (choose type via segmented control)
+>Mini Trackers: mood picker (emojis), energy tracker,
+>Button Row: Primary (start focus), Secondary (Plan day)
+
+-Plan (tasks)
+>Inbox, today, upcoming, (3 chips, top)
+>task card: title, due, priority, checkbox
+>add task: title (req), due date (opt), priority tag (low, md, high)
+>bulk actions: complete/mark all, move to tomorrow
+
+-Track (health, wealth, self)
+>emoji mood entry
+>money spent, invested, saved
+>hobbies, habits
+
+-Journal
+>quick entry
+>entries list (date/first line)
+
+-Me (profile/settings)
+>theme: dark/light/system
+>haptics and reminders: on/off
+>data: export json, clear local data
+>about
+
+*UX Guardrails
+-One obvious CTA per screen
+-limit visible tasks to 3
+-gentle micro-rewards
+-zero-config onboarding (low energy)
+
+
+EXPECTED COMPLETION DATE: 9/10/2025
+
+PHASE TWO:
+PHASE THREE:
