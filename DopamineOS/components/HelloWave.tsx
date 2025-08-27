@@ -6,6 +6,7 @@ import Animated, {
   withRepeat,
   withSequence,
   withTiming,
+  Easing,
 } from 'react-native-reanimated';
 
 import { ThemedText } from '@/components/ThemedText';
@@ -15,8 +16,12 @@ export function HelloWave() {
 
   useEffect(() => {
     rotationAnimation.value = withRepeat(
-      withSequence(withTiming(20, { duration: 400 }), withTiming(0, { duration: 200 }), withTiming(-20, { duration: 400 }), withTiming(0, { duration: 200 })),
-      200 // Run the animation 4 times
+      withSequence(
+        withTiming(20, { duration: 500, easing: Easing.ease }),
+        withTiming(-20, { duration: 500, easing: Easing.ease })
+      ),
+      -1,
+      true //seamless loop
     );
   }, [rotationAnimation]);
 
