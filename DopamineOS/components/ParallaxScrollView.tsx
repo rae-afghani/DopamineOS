@@ -17,7 +17,7 @@ import { Colors } from '@/constants/Colors';
 import type { ColorValue } from 'react-native';
 
 
-const headerHeight = 16;
+const headerHeight = 48;
 
 type Props = PropsWithChildren<{
 }>;

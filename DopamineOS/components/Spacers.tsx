@@ -22,7 +22,7 @@ export function SpacerSM(){
     <ThemedView style={styles.spacerSM}></ThemedView>
   );
 }
-export default function SpacerMD(){
+export function SpacerMD(){
   return (
     <ThemedView style={styles.spacerMD}></ThemedView>
   );
@@ -40,23 +40,23 @@ export function SpacerXL(){
 
 const styles = StyleSheet.create({
   spacerXS: {
-    height: spacerXS,
+    marginTop: spacerXS,
     overflow: 'hidden',
   },
   spacerSM: {
-    height: spacerSM,
+    marginTop: spacerSM,
     overflow: 'hidden',
   },
   spacerMD: {
-    height: spacerMD,
+    marginTop: spacerMD,
     overflow: 'hidden',
   },
   spacerLG: {
-    height: spacerLG,
+    marginTop: spacerLG,
     overflow: 'hidden',
   },
   spacerXL: {
-    height: spacerXL,
+    marginTop: spacerXL,
     overflow: 'hidden',
   },
 });

@@ -1,5 +1,5 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import * as React from 'react';
+import { Alert, Keyboard, Platform, StyleSheet } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -10,17 +10,13 @@ import PrimaryButton from '@/components/buttons/primary';
 import SecondaryButton from '@/components/buttons/secondary';
 import ButtonRow from '@/components/buttons/ButtonRow';
 
+import { KeyboardState } from 'react-native-reanimated';
+
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: Colors.light.background, dark: Colors.dark.background }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
+
+    <ParallaxScrollView>
 
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">DopamineOS</ThemedText>
@@ -30,16 +26,11 @@ export default function HomeScreen() {
         <ThemedText type="subtitle">Your life, rewired.</ThemedText>
       </ThemedView>
 
-      <PrimaryButton label="Click"/>
-      <SecondaryButton label="Click"/>
-
-      <ButtonRow>
-        <PrimaryButton label="Click"/>
-      <SecondaryButton label="Click"/>
-      </ButtonRow>
-
-      <PrimaryButton label='Dropdown' dropdown/>
-
+      <PrimaryButton label="Dashboard" size='lg' />
+      <PrimaryButton label="Plan" size='lg' onPress={() => { Alert.alert('Coming soon!');}}/>
+      <PrimaryButton label="Track" size='lg' onPress={() => { Alert.prompt('howdy', 'say it back'); }} />
+      <PrimaryButton label="Journal" size='lg' disabled />
+      <PrimaryButton label="Account" size='lg' disabled />
 
     </ParallaxScrollView>
   );

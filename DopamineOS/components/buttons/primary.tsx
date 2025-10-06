@@ -3,6 +3,7 @@ import * as React from 'react';
 import { StyleSheet, View, Pressable, Text, useColorScheme, GestureResponderEvent } from 'react-native';
 import { ReactNode } from 'react';
 import { Colors } from '@/constants/Colors';
+import * as Haptics from 'expo-haptics';
 
 type Size = 'sm' | 'md' | 'lg';
 
@@ -64,7 +65,7 @@ export default function PrimaryButton({
             accessibilityState={{ disabled, busy: loading }}
             accessibilityLabel={ accessibilityLabel ?? label }
             disabled={ disabled || loading }
-            onPress={ onPress }
+            onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}
             hitSlop={ 8 }
             style={({ pressed }) => [
                 styles.base,
@@ -73,6 +74,7 @@ export default function PrimaryButton({
                 { backgroundColor: backgroundColor, borderRadius: 12, opacity: disabled ? 0.25 : pressed ? 0.5 : 1 },
 
             ]}
+            
         >
             {/* ROW */}
             <View style= { styles.row }>
